@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\AssemblyInfo.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Stdafx.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.Prototype.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Decoder.File.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Decoder.Stream.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Decoder.Stream.State.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Encoder.File.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Encoder.Stream.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Encoder.Stream.State.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Format.Frame.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Decoder.DecoderFile.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Format.EntropyCodingMethod.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Encoder.EncoderFile.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Metadata.Prototype.h">
+      <Filter>標頭檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.Application.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.CueSheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.CueSheet.Index.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.CueSheet.Track.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.Padding.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.Picture.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.SeekTable.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.SeekTable.SeekPoint.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.StreamInfo.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.Unknown.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.VorbisComment.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Metadata.VorbisComment.Entry.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Stdafx.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Decoder.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Encoder.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Format.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.Application.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.CueSheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.Padding.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.Picture.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.SeekTable.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.StreamInfo.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.Unknown.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Metadata.VorbisComment.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{f1545345-1791-4b66-a97d-4f5594ba833e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{70843405-0f93-408b-a1d6-288bc7959038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{384869a2-ab95-4841-88bb-cb74980ea9ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc">
+      <Filter>資源檔</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico">
+      <Filter>資源檔</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

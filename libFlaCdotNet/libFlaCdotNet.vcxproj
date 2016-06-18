@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4BF2F48-1FEA-4295-A05A-8DD7CE26CD1C}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>libFlaCdotNet</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>libFlaCdotNet</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;FLACPP_API_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>true</CompileAsManaged>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <CallingConvention>
+      </CallingConvention>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\win_utf8_io_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libogg_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC++_static.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AddModuleNamesToAssembly>
+      </AddModuleNamesToAssembly>
+      <IgnoreSpecificDefaultLibraries>libcmtd</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\flac\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsManaged>true</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\win_utf8_io_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libogg_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC++_static.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AddModuleNamesToAssembly>
+      </AddModuleNamesToAssembly>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\flac\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\win_utf8_io_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libogg_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC++_static.lib</AdditionalDependencies>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>..\flac\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\win_utf8_io_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libogg_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC_static.lib;$(SolutionDir)$(ProjectName)\lib\$(Platform)\$(Configuration)\libFLAC++_static.lib</AdditionalDependencies>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Format.h" />
+    <ClInclude Include="include\Decoder.h" />
+    <ClInclude Include="include\Encoder.h" />
+    <ClInclude Include="include\Metadata.Application.h" />
+    <ClInclude Include="include\Metadata.CueSheet.h" />
+    <ClInclude Include="include\Metadata.h" />
+    <ClInclude Include="include\Metadata.Padding.h" />
+    <ClInclude Include="include\Metadata.Picture.h" />
+    <ClInclude Include="include\Metadata.Prototype.h" />
+    <ClInclude Include="include\Metadata.SeekTable.h" />
+    <ClInclude Include="include\Metadata.StreamInfo.h" />
+    <ClInclude Include="include\Metadata.Unknown.h" />
+    <ClInclude Include="include\Metadata.VorbisComment.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="include\Stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Encoder.EncoderFile.cpp" />
+    <ClCompile Include="src\Decoder.DecoderFile.cpp" />
+    <ClCompile Include="src\Format.EntropyCodingMethod.cpp" />
+    <ClCompile Include="src\Format.Frame.cpp" />
+    <ClCompile Include="src\AssemblyInfo.cpp" />
+    <ClCompile Include="src\Decoder.File.cpp" />
+    <ClCompile Include="src\Decoder.Stream.cpp" />
+    <ClCompile Include="src\Decoder.Stream.State.cpp" />
+    <ClCompile Include="src\Encoder.File.cpp" />
+    <ClCompile Include="src\Encoder.Stream.cpp" />
+    <ClCompile Include="src\Encoder.Stream.State.cpp" />
+    <ClCompile Include="src\Metadata.Application.cpp" />
+    <ClCompile Include="src\Metadata.CueSheet.cpp" />
+    <ClCompile Include="src\Metadata.CueSheet.Index.cpp" />
+    <ClCompile Include="src\Metadata.CueSheet.Track.cpp" />
+    <ClCompile Include="src\Metadata.Padding.cpp" />
+    <ClCompile Include="src\Metadata.Picture.cpp" />
+    <ClCompile Include="src\Metadata.Prototype.cpp" />
+    <ClCompile Include="src\Metadata.SeekTable.cpp" />
+    <ClCompile Include="src\Metadata.SeekTable.SeekPoint.cpp" />
+    <ClCompile Include="src\Metadata.StreamInfo.cpp" />
+    <ClCompile Include="src\Metadata.Unknown.cpp" />
+    <ClCompile Include="src\Metadata.VorbisComment.cpp" />
+    <ClCompile Include="src\Metadata.VorbisComment.Entry.cpp" />
+    <ClCompile Include="src\Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="app.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
