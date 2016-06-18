@@ -37,7 +37,8 @@ Finally, put these *.h files in include folder
   * decoder.h
   * encoder.h
   * export.h
-  * metadata.h  
+  * metadata.h
+  
 and these *.lib files in lib folder  
 * Win32/x64
   * Debug/Release
