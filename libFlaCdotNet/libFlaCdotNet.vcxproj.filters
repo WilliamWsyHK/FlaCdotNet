@@ -40,9 +40,6 @@
     <ClCompile Include="src\Encoder.EncoderFile.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
-    <ClCompile Include="include\Metadata.Prototype.h">
-      <Filter>標頭檔</Filter>
-    </ClCompile>
     <ClCompile Include="src\Metadata.Application.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
@@ -123,6 +120,7 @@
     <ClInclude Include="include\Metadata.VorbisComment.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
+    <ClInclude Include="include\Metadata.Prototype.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="標頭檔">
