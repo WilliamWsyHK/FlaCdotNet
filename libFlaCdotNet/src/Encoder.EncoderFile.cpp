@@ -109,17 +109,18 @@ namespace FlaCdotNet
 			gcroot<Encoder::Stream^> instance = *(reinterpret_cast<gcroot<Encoder::Stream^>*>(clientData));
 
 			array<Byte>^ b = gcnew array<Byte>(*bytes);
-			for (Int64 i = 0L; i < b->LongLength; i++)
-			{
-#ifdef _MSC_VER
-#pragma warning (disable: 4244)
-#endif
-				b[i] = buffer[i];
-#ifdef _MSC_VER
-#pragma warning (default: 4244)
-#endif
-			}
 			::FLAC__StreamEncoderReadStatus result = static_cast<::FLAC__StreamEncoderReadStatus>(instance->readCallback(b, *bytes));
+			/*for (size_t i = 0L; i < *bytes; i++)
+			{
+			#ifdef _MSC_VER
+			#pragma warning (disable: 4244)
+			#endif
+			buffer[i] = b[i];
+			#ifdef _MSC_VER
+			#pragma warning (default: 4244)
+			#endif
+			}*/
+			Marshal::Copy(b, 0, IntPtr(buffer), *bytes);
 
 			return result;
 		}
